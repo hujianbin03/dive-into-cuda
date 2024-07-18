@@ -110,7 +110,7 @@ int main(int argc, char **argv){
 
     printf("打印数组A，数组B，主机结果，设备结果前5个数：\n");
     for(int i=0; i < 5; i++){
-        printf("h_A[%d]=%f h_B[%d]=%f hostRef[%d]=%f gpuRef[%d]=%f\n", i, h_A[i], i, h_B[i], i, *hostRef[i], i, *gpuRef[i]);
+        printf("h_A[%d]=%f h_B[%d]=%f hostRef[%d]=%f gpuRef[%d]=%f\n", i, h_A[i], i, h_B[i], i, hostRef[i], i, gpuRef[i]);
     }
 
     // 释放设备端内存
