@@ -50,6 +50,29 @@ void initDevice(int devNum){
   CHECK(cudaSetDevice(dev));
 }
 
+// The best computing power
+void getTheBestComputerPowDevice(){
+    int numDevices = 0;
+    cudaGetDeviceCount(&numDevices);
+    if (numDevices > 1){
+        int maxMultiprocessors = 0, maxDevice = 0;
+        for (int device=0; device<numDevices; device++){
+            cudaDeviceProp props;
+            cudaGetDeviceProperties(&props, device);
+            if (maxMultiprocessors < props.multiProcessorCount){
+                maxMultiprocessors = props.multiProcessorCount;
+                maxDevice = device;
+            }
+        }
+        printf("计算能力最优的gpu编号: %d\n", maxDevice);
+        cudaSetDevice(maxDevice);
+    }
+    else{
+        printf("设备只有一个gpu: %d\n", numDevices);
+        cudaSetDevice(numDevices);
+    }
+}
+
 double cpuSecond(){
   struct timeval tp;
   gettimeofday(&tp,NULL);
