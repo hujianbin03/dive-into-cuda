@@ -126,4 +126,12 @@ void printMatrix_int(int * C,const int nx,const int ny)
     }  
 }
 
+inline double seconds()
+{
+    struct timeval tp;
+    struct timezone tzp;
+    int i = gettimeofday(&tp, &tzp);
+    return ((double)tp.tv_sec + (double)tp.tv_usec * 1.e-6);
+}
+
 #endif  //_UTILS_H
