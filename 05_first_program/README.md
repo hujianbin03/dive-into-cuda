@@ -24,7 +24,7 @@ nvcc hello.cu -o hello
 &emsp;&emsp;然后在同目录下，就会生成hello可执行文件，点击执行，就会看到输出“Hello World from CPU”。
 
 ## 2. 内核函数
-> 代码仓库：[https://github.com/hujianbin03/dive-into-cuda](https://github.com/hujianbin03/dive-into-cuda)
+> 完整代码：[**https://github.com/dive-into-cuda**](https://github.com/hujianbin03/dive-into-cuda)  
 
 接下来，编写一个内核函数，命名为helloFromGPU，用它来输出字符串“Hello World
 from GPU！”。

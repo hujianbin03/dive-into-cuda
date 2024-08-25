@@ -18,7 +18,7 @@ cudaError_t 	cudaSetValidDevices（int *device_arr，int len）		//设置可用�
 ```
 
 下面来，写一个程序：使用运行时API查询设备信息（checkDeviceInfor.cu）
-> 代码仓库：[https://github.com/hujianbin03/dive-into-cuda](https://github.com/hujianbin03/dive-into-cuda)
+> 完整代码：[**https://github.com/dive-into-cuda**](https://github.com/hujianbin03/dive-into-cuda)  
 ```c
 #include <cuda_runtime.h>
 #include <stdio.h>

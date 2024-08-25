@@ -65,7 +65,7 @@ GPU内存结构。
 &emsp;&emsp;下面，我们将通过一个简单的两个数组相加的例子来学习如何在主机和设备之间进行数据传输，以及如何使用CUDA C编程。如下图所示，数组a的第一个元素与数组b的第一个元素相加，得到的结果作为数组c的第一个元素，重复这个过程直到数组中的所有元素都进行了一次运算。
 ![img_3.png](../asset/06/img_3.png)
 我们先来写出C语言写的代码，再来一步一步修改为cuda c代码，如果已经熟悉了C语言，可直接跳到后面看到完整的cuda c代码。
-> 代码仓库：[https://github.com/hujianbin03/dive-into-cuda](https://github.com/hujianbin03/dive-into-cuda)
+> 完整代码：[**https://github.com/dive-into-cuda**](https://github.com/hujianbin03/dive-into-cuda)  
 ```c
 #include <stdlib.h>
 #include <string.h>
@@ -435,7 +435,7 @@ CHECK(cudaDeviceSynchronize());
 &emsp;&emsp;CHECK（cudaDeviceSynchronize（））会阻塞主机端线程的运行直到设备端所有的请求任务都结束，并确保最后的核函数启动部分不会出错。当然在release版本中可以去除这部分，但是开发的时候一定要有的。
 ## 9. 编译和执行
 OK，现在把所有的代码放在一个文件名为sumArraysOnGPU-small-case.cu的文件中，如下：
-> 代码仓库：[https://github.com/hujianbin03/dive-into-cuda](https://github.com/hujianbin03/dive-into-cuda)
+> 完整代码：[**https://github.com/dive-into-cuda**](https://github.com/hujianbin03/dive-into-cuda)  
 ```c 
 #include <cuda_runtime.h>
 #include <stdio.h>

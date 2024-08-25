@@ -86,7 +86,7 @@ __global__ void mathKernel2(float *c){
     c[tid] = a + b;
 }
 ```
-完整代码：[https://github.com/hujianbin03/dive-into-cuda](https://github.com/hujianbin03/dive-into-cuda)
+完整代码：[**https://github.com/dive-into-cuda**](https://github.com/hujianbin03/dive-into-cuda)  
 ```c
 #include <cuda_runtime.h>
 #include "../include/utils.h"
@@ -368,7 +368,7 @@ $$
 占用率=\frac{活跃线程束数量}{最大线程束数量}
 $$
 现在我们来写一个简单的程序，查询简单设备的属性（simpleDeviceQuery.cu）
-> 代码仓库：[https://github.com/hujianbin03/dive-into-cuda](https://github.com/hujianbin03/dive-into-cuda)
+> 完整代码：[**https://github.com/dive-into-cuda**](https://github.com/hujianbin03/dive-into-cuda)  
 ```c
 #include <stdio.h>
 #include <cuda_runtime.h>
